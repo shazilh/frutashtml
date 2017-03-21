@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Lista LI</title>
+<script type="text/javascript">
+<!--
+function agreagarLi(){
+    var texto=document.getElementById('liname').value;
+    var li=document.createElement('LI');
+    li.innerHTML=texto==''?'(nada)':texto;
+    document.getElementById('lista').appendChild(li);
+}
+function borrar(){
+    lis=document.getElementById('lista').getElementsByTagName('li');
+    for(var i=0; i<lis.length;i++){
+        lis[i].onclick=function(){
+            if(confirm('¿Borrar este li?'))
+            this.parentNode.removeChild(this);
+        };
+    }
+
+}
+-->
+</script>
+</head>
+
+<body>
+<input type="text" id="liname" value="Otro mas" />
+<input type="button" onclick="agreagarLi();" value="Agregar" />
+<ul id="lista" onclick="borrar();">
+    <li>Aqui viene un item</li>
+    <li>Aqui va otro item</li>
+</ul>
+</body>
+</html>
