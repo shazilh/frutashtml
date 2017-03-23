@@ -5,15 +5,12 @@ function agregar(){
    li.innerHTML=texto==''?'(nada)':texto;
    document.getElementById("lista").appendChild(li);
 }
-/*
 function borrar(){
-    lis=document.getElementById("lista").getElementsByTagName('li');
+    var lis=document.getElementById("lista").getElementsByTagName('li');
     for(var i=0; i<lis.length;i++){
-        lis[i].onclick=function(){
-            if(confirm('Â¿Borrar este li?'))
+        lis[i].onclick=function borrar(){
+            if(confirm('Estas seguro de borrar este elemento?'))
             this.parentNode.removeChild(this);
         };
     }
-
 }
-*/
